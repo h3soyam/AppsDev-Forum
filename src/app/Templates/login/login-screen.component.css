@@ -1,0 +1,49 @@
+.bg {
+  background-image: url("../../../assets/images/bglogin.png");
+  height: 60.5em;
+  background-size: cover;
+  width: auto;
+  background-position: 50% 50%;
+}
+.col {
+  width: 570px;
+  left: 67px;
+  top: 73px;
+}
+h1 {
+  color: rgb(255, 255, 255);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 106px;
+  margin: 0%;
+}
+h5 {
+  color: white;
+}
+.formContainer {
+  width: 520px;
+  height: 398px;
+  background-color: white;
+  border-radius: 21px;
+}
+.col2 {
+  padding-top: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.txt {
+  margin-bottom: 177px;
+}
+h3 {
+  font-family: Roboto;
+  font-size: 36px;
+  font-style: normal;
+  color: #882223;
+  padding-bottom: 40px;
+}
+h6 {
+  padding-top: 24px;
+  color: #882223;
+}

@@ -11,6 +11,8 @@ import { SignupScreenComponent } from './Templates/signup-screen/signup-screen.c
 import { SignupFormComponent } from './Molecules/signup-form/signup-form.component';
 import { HomeScreenComponent } from './Templates/home-screen/home-screen.component';
 import { HeaderComponent } from './Molecules/header/header.component';
+import { PostComponent } from './Molecules/post/post.component';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { HeaderComponent } from './Molecules/header/header.component';
     SignupFormComponent,
     HomeScreenComponent,
     HeaderComponent,
+    PostComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,

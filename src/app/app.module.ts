@@ -12,9 +12,11 @@ import { SignupFormComponent } from './Molecules/signup-form/signup-form.compone
 import { HomeScreenComponent } from './Templates/home-screen/home-screen.component';
 import { HeaderComponent } from './Molecules/header/header.component';
 import { PostComponent } from './Molecules/post/post.component';
+import { ThreadComponent } from './Molecules/thread/thread.component';
 
 
 @NgModule({
+
   declarations: [
     AppComponent,
     LoginScreenComponent,
@@ -23,8 +25,10 @@ import { PostComponent } from './Molecules/post/post.component';
     SignupFormComponent,
     HomeScreenComponent,
     HeaderComponent,
-    PostComponent
+    PostComponent,
+    ThreadComponent,
   ],
+
 
   imports: [
     BrowserModule,

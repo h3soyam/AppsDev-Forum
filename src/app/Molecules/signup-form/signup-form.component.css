@@ -1,0 +1,12 @@
+.form-control.ng-touched.ng-invalid {
+  border: 2px solid red;
+}
+
+.checkbox {
+  margin-top: 14px;
+}
+
+.upload {
+  margin-bottom: 18px;
+  margin-top: 15px;
+}

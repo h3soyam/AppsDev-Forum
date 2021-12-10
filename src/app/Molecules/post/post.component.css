@@ -1,53 +1,40 @@
-
-  .head {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-    padding: 30px;
-    width: 886px;
-    height: 250px;
-    left: 250px;
-    top: 50px;
-    position: absolute;
-    background-color: #f1f1f1;
-    text-align: center;
-
-  }
-
-.body{
-        background-color: #ECDFDF;
-        background-size: cover;
-        width: auto;
+.head {
+  padding: 50px;
+  padding-top: 20px;
+  width: 886px;
+  height: 200px;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px;
 }
 
-.avatar{
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-
+.avatar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
 }
 
-.title{
-position: relative;
-width: 618px;
-height: 44px;
-background: #E0DCDC;
-border-radius: 10px;
-outline: none;
+.form-control {
+  width: 618px;
+  height: 44px;
+  border-radius: 10px;
+  outline: transparent;
+  box-shadow: transparent;
 }
 
-
-textarea{
-position: relative;
-left: 34px;
-float: left;
-width: 618px;
-height: 100px;
-background: #E0DCDC;
-border-radius: 10px;
-text-align: start;
+textarea {
+  position: relative;
+  padding: 10px;
+  left: 34px;
+  float: left;
+  width: 618px;
+  height: 100px;
+  border-radius: 10px;
+  text-align: start;
+  border-color: rgb(218, 215, 215);
+  outline: transparent;
 }
-
-html{
-    background-color: #ECDFDF;
-
+.col-xs-4 {
+  margin-left: 16px;
+  margin-right: 20px;
 }
-

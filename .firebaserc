@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "estoryaheforums": {
+      "hosting": {
+        "forum": [
+          "estoryaheforums"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "estoryaheforums"
+  }
+}

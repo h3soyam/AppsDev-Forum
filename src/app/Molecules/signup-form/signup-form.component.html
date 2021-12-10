@@ -1,52 +1,95 @@
-<form>
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input
-        ngModel
-        name="email"
-        #email="ngModel"
-        (change)="log(email)"
-        id="email"
-        type="text"
-        class="form-control"
-      />
+<form #f="ngForm">
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+      required
+      ngModel
+      name="email"
+      #email="ngModel"
+      (change)="log(email)"
+      id="email"
+      type="text"
+      class="form-control"
+    />
+    <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+      <div *ngIf="email.errors.required">Email is required</div>
+      <div *ngIf="email.errors.pattern">Invalid Email</div>
     </div>
-    <div class="form-group">
-      <label for="username">Username</label>
-      <input
-        ngModel
-        name="username"
-        #username="ngModel"
-        (change)="log(username)"
-        id="username"
-        type="text"
-        class="form-control"
-      />
+  </div>
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input
+      minlength="5"
+      required
+      ngModel
+      name="username"
+      #username="ngModel"
+      (change)="log(username)"
+      id="username"
+      type="text"
+      class="form-control"
+    />
+    <div class="alert alert-danger" *ngIf="username.touched && !username.valid">
+      <div *ngIf="username.errors.required">Username is required</div>
+      <div *ngIf="username.errors.minlength">Username is too short</div>
     </div>
-    <div class="form-group">
-        <label for="age">Age</label>
-        <input
-          ngModel
-          name="Age"
-          #age="ngModel"
-          (change)="log(age)"
-          id="age"
-          type="text"
-          class="form-control"
-        />
+  </div>
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input
+      maxlength="2"
+      pattern="^[0-9]*$"
+      required
+      ngModel
+      name="age"
+      #age="ngModel"
+      (change)="log(age)"
+      id="age"
+      type="text"
+      class="form-control"
+    />
+    <div class="alert alert-danger" *ngIf="age.touched && !age.valid">
+      <div *ngIf="age.errors.required">Age is required</div>
+      <div *ngIf="age.errors.pattern">Age is invalid</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input
+      pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
+      required
+      ngModel
+      name="password"
+      #password="ngModel"
+      (change)="log(password)"
+      id="password"
+      type="password"
+      class="form-control"
+    />
+    <div class="alert alert-danger" *ngIf="password.touched && !password.valid">
+      <div *ngIf="password.errors.required">Password is required</div>
+      <div *ngIf="password.errors.pattern">
+        Password must have Minimum eight characters, at least one letter and one
+        number
       </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input
-          ngModel
-          name="password"
-          #password="ngModel"
-          (change)="log(password)"
-          id="password"
-          type="password"
-          class="form-control"
-        />
-      </div>
-    <button class="btn btn-outline-danger">Count Me In</button>
-  </form>
-  
+    </div>
+  </div>
+  <div>
+    <div>Select your profile picture</div>
+    <div class="upload">
+      <input #imageInput type="file" accept="image/*" />
+    </div>
+  </div>
+  <div>
+    <button class="btn btn-outline-danger" [disabled]="!f.valid">
+      Count Me In
+    </button>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" ngModel name="isRequest" />
+        I want to be an admin!
+      </label>
+    </div>
+  </div>
+</form>

@@ -1,15 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-signup-screen',
+  selector: 'signup-screen',
   templateUrl: './signup-screen.component.html',
-  styleUrls: ['./signup-screen.component.css']
+  styleUrls: ['./signup-screen.component.css'],
 })
 export class SignupScreenComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
